@@ -35,7 +35,7 @@ public class LightBlockMixin extends Block implements Waterloggable {
     @Unique
     @Override
     protected boolean isSideInvisible(BlockState blockState, BlockState blockState2, Direction direction) {
-        if(blockState2.isOf((BarrierBlock)(Object)this)) {
+        if(blockState2.isOf((LightBlock)(Object)this)) {
             return true;
         }
         return super.isSideInvisible(blockState, blockState2, direction);
