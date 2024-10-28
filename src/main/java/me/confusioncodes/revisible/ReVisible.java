@@ -15,28 +15,30 @@ import net.minecraft.util.Identifier;
 import java.util.Set;
 
 public class ReVisible implements ModInitializer {
-    public static final Identifier BARRIER_ID = Identifier.of("revisible", "block/barrier");
+    public static final String MOD_ID = "revisible";
+
+    public static final Identifier BARRIER_ID = Identifier.of(MOD_ID, "block/barrier");
     public static boolean showBarriers = false;
     public static final Set<Identifier> LIGHT_IDS = Set.of(
-            Identifier.of("revisible", "block/light_00"),
-            Identifier.of("revisible", "block/light_01"),
-            Identifier.of("revisible", "block/light_02"),
-            Identifier.of("revisible", "block/light_03"),
-            Identifier.of("revisible", "block/light_04"),
-            Identifier.of("revisible", "block/light_05"),
-            Identifier.of("revisible", "block/light_06"),
-            Identifier.of("revisible", "block/light_07"),
-            Identifier.of("revisible", "block/light_08"),
-            Identifier.of("revisible", "block/light_09"),
-            Identifier.of("revisible", "block/light_10"),
-            Identifier.of("revisible", "block/light_11"),
-            Identifier.of("revisible", "block/light_12"),
-            Identifier.of("revisible", "block/light_13"),
-            Identifier.of("revisible", "block/light_14"),
-            Identifier.of("revisible", "block/light_15")
+            Identifier.of(MOD_ID, "block/light_00"),
+            Identifier.of(MOD_ID, "block/light_01"),
+            Identifier.of(MOD_ID, "block/light_02"),
+            Identifier.of(MOD_ID, "block/light_03"),
+            Identifier.of(MOD_ID, "block/light_04"),
+            Identifier.of(MOD_ID, "block/light_05"),
+            Identifier.of(MOD_ID, "block/light_06"),
+            Identifier.of(MOD_ID, "block/light_07"),
+            Identifier.of(MOD_ID, "block/light_08"),
+            Identifier.of(MOD_ID, "block/light_09"),
+            Identifier.of(MOD_ID, "block/light_10"),
+            Identifier.of(MOD_ID, "block/light_11"),
+            Identifier.of(MOD_ID, "block/light_12"),
+            Identifier.of(MOD_ID, "block/light_13"),
+            Identifier.of(MOD_ID, "block/light_14"),
+            Identifier.of(MOD_ID, "block/light_15")
     );
     public static boolean showLights = false;
-    public static final Identifier STRUCTURE_VOID_ID = Identifier.of("revisible", "block/structure_void");
+    public static final Identifier STRUCTURE_VOID_ID = Identifier.of(MOD_ID, "block/structure_void");
     public static boolean showStructureVoid = false;
     
     @Override
