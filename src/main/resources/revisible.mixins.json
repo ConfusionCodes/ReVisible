@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.confusioncodes.revisible.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "BarrierBlockMixin",
+    "LightBlockMixin",
+    "StructureVoidBlockMixin",
+    "AnimatedTextureMixin",
+    "ClientLevelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

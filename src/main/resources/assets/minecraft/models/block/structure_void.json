@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "revisible:block/structure_void",
+    "particle": "minecraft:item/structure_void"
+  }
+}
