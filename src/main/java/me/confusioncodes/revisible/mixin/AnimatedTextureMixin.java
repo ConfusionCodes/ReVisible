@@ -1,5 +1,6 @@
 package me.confusioncodes.revisible.mixin;
 
+import com.mojang.blaze3d.textures.GpuTexture;
 import me.confusioncodes.revisible.ReVisible;
 import net.minecraft.client.texture.Animator;
 import net.minecraft.client.texture.SpriteContents;
@@ -19,7 +20,7 @@ public abstract class AnimatedTextureMixin {
 
     @Shadow(aliases = "field_28469") @Final SpriteContents this$0;
     
-    @Shadow abstract void upload(int x, int y, int frame);
+    @Shadow abstract void upload(int x, int y, int frame, GpuTexture texture);
 
     @Inject(method = "createAnimator", at = @At("HEAD"), cancellable = true)
     private void revisible$customAnimator(CallbackInfoReturnable<Animator> cir) {
@@ -38,10 +39,10 @@ public abstract class AnimatedTextureMixin {
             private boolean showing = false;
 
             @Override
-            public void tick(int x, int y) {
+            public void tick(int x, int y, GpuTexture texture) {
                 if(showing != show.getAsBoolean()) {
                     showing = show.getAsBoolean();
-                    upload(x, y, showing ? 1 : 0);
+                    upload(x, y, showing ? 1 : 0, texture);
                 }
             }
 
